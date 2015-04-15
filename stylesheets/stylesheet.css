@@ -264,6 +264,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
+  top:0;
   max-width: 72%;
   margin: 0 auto;
 }
@@ -302,7 +303,7 @@ Full-Width Styles
 
 #logo {
   position: absolute;
-  left: -152px;
+  left: -155px;
   padding-left: 146px;
   height:109%;
   background: url(../images/logo.png)no-repeat right ;
