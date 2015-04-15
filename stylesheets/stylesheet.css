@@ -229,12 +229,7 @@ dl p {
   font-style: italic;
 }
 
-hr {
-  height: 1px;
-  margin-bottom: 5px;
-  border: none;
-  background: url('../images/bg_hr.png') repeat-x center;
-}
+
 
 table {
   border: 1px solid #373737;
@@ -269,7 +264,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 75%;
+  max-width: 72%;
   margin: 0 auto;
 }
 
@@ -307,29 +302,24 @@ Full-Width Styles
 
 #logo {
   position: absolute;
-  left: -158px;
-  padding-left: 152px;
-  height:95%;
+  left: -152px;
+  padding-left: 146px;
+  height:109%;
   background: url(../images/logo.png)no-repeat right ;
-  background-size: 120px 120px;
-}
-
-#header_wrap .inner {
-  padding: 7px 5px 7px 0px;
+  background-size: 143px 143px;
 }
 
 #project_title {
   margin: 3;
   color: #fff;
   font-size: 43px;
-  text-shadow: #111 0px 0px 10px;
 }
 
 #project_tagline {
   color: #fff;
+  line-height: 10%;
   font-size: 20px;
   background: none;
-  text-shadow: #111 0px 0px 10px;
 }
 
 #downloads {
