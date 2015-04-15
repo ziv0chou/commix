@@ -272,7 +272,7 @@ Full-Width Styles
 #forkme_banner {
   display: block;
   position: absolute;
-  top:0;
+  top:-3;
   right: -4px;
   z-index: 10;
   padding: 7px 52px 5px 10px;
@@ -287,8 +287,8 @@ Full-Width Styles
 
 #tweetme_banner {
   position: absolute;
-  top:0;
-  right: 165px;
+  top:-3;
+  right: 173px;
   z-index: 10;
   padding: 7px 52px 5px 10px;
   color: #fff;
@@ -371,9 +371,8 @@ Full-Width Styles
 }
 
 #footer_wrap {
-text-indent: 225px;
   font-style: italic;
-  font-size: 13px;
+  font-size: 10px;
 
 }
 
