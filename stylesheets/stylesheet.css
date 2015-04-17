@@ -371,35 +371,40 @@ Full-Width Styles
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   body {
-  font-size:12px;
+    font-size:12px;
   }
 
   #downloads {
-  display: none;
+    display: none;
   }
 
   .inner {
-  min-width: 320px;
-  max-width: 480px;
+    min-width: 320px;
+    max-width: 480px;
   }
 
+  #logo {
+    position: absolute;
+    left: -152px;
+    padding-left: 145px;
+    height:99%;
+    background: url(../images/logo.png)no-repeat right ;
+    background-size: 41px 41px;
+  }
+  
   #project_tagline {
     font-size: 10px;
+
     letter-spacing: 0.5px;
-    }
+  }
 
   #project_title {
-    font-size: 29px;
-    }
+    font-size: 25px;
+  }
 
   #forkme_banner {
     display: block;
@@ -407,7 +412,7 @@ Small Device Styles
     top:3px;
     right: -4px;
     z-index: 10;
-    padding: 3px 38px 5px 10px;
+    padding: 3px 30px 5px 10px;
     color: #fff;
     background: url('../images/blacktocat.png') #0090ff no-repeat 100% 50%;
     background-size: 32px 32px;
@@ -420,9 +425,9 @@ Small Device Styles
   #tweetme_banner {
     position: absolute;
     top:3px;
-    right: 115px;
+    right: 100px;
     z-index: 10;
-    padding: 3px 38px 5px 10px;
+    padding: 3px 30px 5px 10px;
     color: #fff;
     background: url('../images/twitter.png') #0090ff no-repeat 100% 50%;
     background-size: 32px 32px;
@@ -431,37 +436,38 @@ Small Device Styles
     border-bottom-right-radius: 7px;
     font-size: 9px;
   }
+  
   h1 {
-  font-size: 28px;
+    font-size: 28px;
   }
 
   h2 {
-  font-size: 24px;
+    font-size: 24px;
   }
 
   h3 {
-  font-size: 21px;
+    font-size: 21px;
   }
 
   h4 {
-  font-size: 18px;
+    font-size: 18px;
   }
 
   h5 {
-  font-size: 14px;
+    font-size: 14px;
   }
 
   h6 {
-  font-size: 12px;
+    font-size: 12px;
   }
 
   code, pre {
-  min-width: 320px;
-  max-width: 480px;
-  font-size: 10px;
+    min-width: 320px;
+    max-width: 480px;
+    font-size: 10px;
   }
 
-  #footer_wrap {
-  font-size:10px;
+  footer p {
+    font-size: 9px;
   }
 }
