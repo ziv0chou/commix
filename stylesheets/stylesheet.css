@@ -306,7 +306,7 @@ Full-Width Styles
 
 #logo {
   position: absolute;
-  left: -180px;
+  left: -152px;
   padding-left: 145px;
   height:103%;
   background: url(../images/logo.png)no-repeat right ;
@@ -373,7 +373,7 @@ Small Device Styles
 *******************************************************************************/
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1100px) {
   body {
     font-size:12px;
   }
