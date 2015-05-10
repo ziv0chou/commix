@@ -120,9 +120,13 @@ URL.
 
 <pre><code>These options can be used, to enumerate the target host.
 
---current-user  Retrieve current user.
---hostname      Retrieve server hostname.
---is-root       Check if the current user have root privs.
+--current-user      Retrieve current user name.
+--hostname          Retrieve current hostname.
+--is-root           Check if the current user have root privs.
+--sys-info          Retrieve system information.
+--users             Retrieve system users.
+--passwords         Retrieve system users password hashes.
+--privileges        Retrieve system users privileges.
 </code></pre>
 
 <h4>
@@ -150,7 +154,7 @@ to provide custom injection payloads.
                     'ip_src=192.168.178.1,ip_dst=192.168.178.3').
 --alter-shell       Use an alternative os-shell (Python). Available only
                     for 'tempfile-based' injections.
---os-shell=OS_SH..  Execute a single operating system command.
+--os-cmd=OS_CMD     Execute a single operating system command.
 </code></pre>
 
 <h4>
@@ -193,6 +197,7 @@ to provide custom injection payloads.
 <li><a href="https://www.vulnhub.com/entry/command-injection-iso-1,81/" target="_blank">Pentester Academy: Command Injection ISO: 1</a></li>
 <li><a href="https://github.com/SpiderLabs/MCIR/tree/master/shellol" target="_blank">SpiderLabs: MCIR (ShelLOL)</a></li>
 <li><a href="https://www.vulnhub.com/entry/kioptrix-2014-5,62/" target="_blank">Kioptrix: 2014 (#5)</a></li>
+<li><a href="https://github.com/andresriancho/w3af-moth/" target="_blank">w3af-moth</a></li>
 <li>[...]</li>
 </ul>
 
