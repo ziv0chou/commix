@@ -89,38 +89,31 @@ Copyright (c) 2015 Anastasios Stasinopoulos (@ancst)
 
 <h4>
 <a id="target" class="anchor" href="#target" aria-hidden="true"><span class="octicon octicon-link"></span></a>Target</h4>
-
-<pre><code>This options has to be provided, to define the target URL.
-
---url=URL           Target URL
+This options has to be provided, to define the target URL.
+<pre><code>--url=URL           Target URL
 --url-reload        Reload target URL after command execution.
 </code></pre>
 
 <h4>
 <a id="request" class="anchor" href="#request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Request</h4>
-
-<pre><code>These options can be used, to specify how to connect to the target
-URL.
-
---host=HOST         HTTP Host header.
+These options can be used, to specify how to connect to the target URL.
+<pre><code>--host=HOST         HTTP Host header.
 --referer=REFERER   HTTP Referer header.
 --user-agent=AGENT  HTTP User-Agent header.
---random-agent      Use a randomly selected HTTP User-Agent header.
 --cookie=COOKIE     HTTP Cookie header.
+--random-agent      Use a randomly selected HTTP User-Agent header.
 --headers=HEADERS   Extra headers (e.g. 'Header1:Value1\nHeader2:Value2').
 --proxy=PROXY       Use a HTTP proxy (e.g. '127.0.0.1:8080').
 --auth-url=AUTH_..  Login panel URL.
 --auth-data=AUTH..  Login parameters and data.
---auth-cred=AUTH..  HTTP Basic Authentication credentials (e.g.
-                    'admin:admin').
+--auth-type=AUTH..  HTTP authentication type (e.g. 'basic').
+--auth-cred=AUTH..  HTTP Authentication credentials (e.g. 'admin:admin').
 </code></pre>
 
 <h4>
 <a id="enumeration" class="anchor" href="#enumeration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enumeration</h4>
-
-<pre><code>These options can be used, to enumerate the target host.
-
---current-user      Retrieve current user name.
+These options can be used, to enumerate the target host.
+<pre><code>--current-user      Retrieve current user name.
 --hostname          Retrieve current hostname.
 --is-root           Check if the current user have root privs.
 --sys-info          Retrieve system information.
@@ -130,12 +123,15 @@ URL.
 </code></pre>
 
 <h4>
+<a id="enumeration" class="anchor" href="#enumeration" aria-hidden="true"><span class="octicon octicon-link"></span></a>File access</h4>
+These options can be used to access files on the target host.
+<pre><code>--file-read=FILE..  Read a file from the target host.
+</code></pre>
+
+<h4>
 <a id="injection" class="anchor" href="#injection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Injection</h4>
-
-<pre><code>These options can be used, to specify which parameters to inject and
-to provide custom injection payloads.
-
---data=DATA         POST data to inject (use 'INJECT_HERE' tag to specify
+These options can be used, to specify which parameters to inject and to provide custom injection payloads.
+<pre><code>--data=DATA         POST data to inject (use 'INJECT_HERE' tag to specify
                     the testable parameter).
 --suffix=SUFFIX     Injection payload suffix string.
 --prefix=PREFIX     Injection payload prefix string.
