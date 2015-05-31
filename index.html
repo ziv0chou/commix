@@ -62,10 +62,16 @@ Copyright (c) 2015 Anastasios Stasinopoulos (@ancst)
 
 <p>Download commix by cloning the Git repository:</p>
 <pre><code>git clone https://github.com/stasinopoulos/commix.git commix</code></pre>
+
 <p>Commix comes packaged on the official repositories, of the following Linux distributions:</p>
 <ul>
 <li><a href="https://archassault.org/" target="_blank">ArchAssault</a></li>
 <li><a href="http://blackarch.org/" target="_blank">BlackArch</a></li>
+</ul>
+
+<p>Commix also comes as a plugin, on the following penetration testing frameworks:</p>
+<ul>
+<li><a href="https://github.com/trustedsec/ptf" target="_blank">The Penetration Testers Framework (PTF)</a></li>
 </ul>
 
 <h1>
@@ -120,12 +126,18 @@ These options can be used, to enumerate the target host.
 </code></pre>
 
 <h4>
-<a id="enumeration" class="anchor" href="#enumeration" aria-hidden="true"><span class="octicon octicon-link"></span></a>File access</h4>
+<a id="file_access" class="anchor" href="#file_access" aria-hidden="true"><span class="octicon octicon-link"></span></a>File access</h4>
 These options can be used to access files on the target host.
 <pre><code>--file-read=FILE..  Read a file from the target host.
 --file-write=FIL..  Write to a file on the target host.
 --file-upload=FI..  Upload a file on the target host.
 --file-dest=FILE..  Host's absolute filepath to write and/or upload to.
+</code></pre>
+
+<h4>
+<a id="modules" class="anchor" href="#file_access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h4>
+These options can be used increase the detection and/or injection capabilities.
+<pre><code>--icmp-exfil=IP_..  The ICMP exfiltration technique (e.g. 'ip_src=192.168.178.1,ip_dst=192.168.178.3').
 </code></pre>
 
 <h4>
