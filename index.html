@@ -138,6 +138,7 @@ These options can be used to access files on the target host.
 <a id="modules" class="anchor" href="#file_access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h4>
 These options can be used increase the detection and/or injection capabilities.
 <pre><code>--icmp-exfil=IP_..  The ICMP exfiltration technique (e.g. 'ip_src=192.168.178.1,ip_dst=192.168.178.3').
+--shellshock        The 'shellshock' injection technique.
 </code></pre>
 
 <h4>
@@ -146,7 +147,7 @@ These options can be used, to specify which parameters to inject and to provide 
 <pre><code>--data=DATA         POST data to inject (use 'INJECT_HERE' tag to specify the testable parameter).
 --suffix=SUFFIX     Injection payload suffix string.
 --prefix=PREFIX     Injection payload prefix string.
---technique=TECH    Specify a certain injection technique : 'classic', 'eval-based', 'time-based' or 'file-based'.
+--technique=TECH    Specify injection technique(s) to use.
 --maxlen=MAXLEN     The length of the output on time-based technique (Default: 10000 chars).
 --delay=DELAY       Set Time-delay for time-based and file-based techniques (Default: 1 sec).
 --base64            Use Base64 (enc)/(de)code trick to prevent false-positive results.
@@ -178,6 +179,7 @@ Do you want to increase the capabilities of the commix tool and/or to adapt it t
 <li><a href="http://www.itsecgames.com/" target="_blank">bWAPP: bee-box (v1.6)</a></li>
 <li><a href="https://www.vulnhub.com/entry/persistence-1,103/" target="_blank">Persistence</a></li>
 <li><a href="https://www.vulnhub.com/entry/pentester-lab-web-for-pentester,71/" target="_blank">Pentester Lab: Web For Pentester</a></li>
+<li><a href="https://www.vulnhub.com/entry/pentester-lab-cve-2014-6271-shellshock,104/" target="_blank">Pentester Lab: CVE-2014-6271/Shellshock</a></li>
 <li><a href="https://www.vulnhub.com/entry/command-injection-iso-1,81/" target="_blank">Pentester Academy: Command Injection ISO: 1</a></li>
 <li><a href="https://github.com/SpiderLabs/MCIR/tree/master/shellol" target="_blank">SpiderLabs: MCIR (ShelLOL)</a></li>
 <li><a href="https://www.vulnhub.com/entry/kioptrix-2014-5,62/" target="_blank">Kioptrix: 2014 (#5)</a></li>
@@ -187,9 +189,10 @@ Do you want to increase the capabilities of the commix tool and/or to adapt it t
 <h4>
 <a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploitation Demos</h4>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=PT4uSTCxKJU" target="_blank">Exploiting DVWA (1.0.8) command injection flaws</a></li>
-<li><a href="https://www.youtube.com/watch?v=zqI8NcHfboo" target="_blank">Exploiting bWAPP command injection flaws (normal & blind) </a></li>
-<li><a href="https://www.youtube.com/watch?v=aVTGqiyVz5o" target="_blank">Exploiting 'Persistence' blind command injection flaw</a></li>
+<li><a href="https://www.youtube.com/watch?v=PT4uSTCxKJU" target="_blank">Exploiting DVWA (1.0.8) command injection flaws.</a></li>
+<li><a href="https://www.youtube.com/watch?v=zqI8NcHfboo" target="_blank">Exploiting bWAPP command injection flaws (normal & blind).</a></li>
+<li><a href="https://www.youtube.com/watch?v=aVTGqiyVz5o" target="_blank">Exploiting 'Persistence' blind command injection flaw.</a></li>
+<li><a href="https://www.youtube.com/watch?v=5NvopJsCj4w" target="_blank">Exploiting shellshock command injection flaws.</a></li>
 <li><a href="https://www.youtube.com/watch?v=MdzGY2ws2zY" target="_blank">Upload a PHP shell (i.e. Metasploit PHP Meterpreter) on target host.</a></li>
 <li><a href="https://www.youtube.com/watch?v=cy7AW6OQBmU" target="_blank">Upload a Weevely PHP web shell on target host.</a></li>
 </ul>
