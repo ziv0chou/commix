@@ -17,7 +17,7 @@
           <a id="logo" href="https://github.com/stasinopoulos/commix" target="_blank"> </a>
           <a id="tweetme_banner" href="https://twitter.com/commixproject" target="_blank">Follow on Twitter</a>
           <a id="forkme_banner" href="https://github.com/stasinopoulos/commix" target="_blank">View on GitHub</a>
-          <h1 id="project_title">Commix</h1>
+          <h1 id="project_title">Commix </h2>
           <h2 id="project_tagline">Automated All-in-One OS Command Injection and Exploitation Tool.</h2>
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/stasinopoulos/commix/zipball/master" >Download this project as a .zip file</a>
@@ -42,136 +42,65 @@ Copyright (c) 2015 Anastasios Stasinopoulos (@ancst)
 +--
 </code></pre>
 
-<h1>
-<a id="general-information" class="anchor" href="#general-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>General Information</h1>
+<h2>
+<a id="general-information" class="anchor" href="#general-information" aria-hidden="true"><span class="octicon octicon-link"></span></a><br>General Information
+</h2>
 
-<p>Commix <em>(short for <strong>comm</strong>and <strong>i</strong>njection e<strong>x</strong>ploiter)</em> has a simple environment and it can be used, from web developers, penetration testers or even security researchers to test web applications with the view to find bugs, errors or vulnerabilities related to command injection attacks. By using this tool, it is very easy to find and exploit a command injection vulnerability in a certain vulnerable parameter or string. Commix is written in Python programming language.</p>
+Commix <em>(short for <strong>comm</strong>and <strong>i</strong>njection e<strong>x</strong>ploiter)</em> has a simple environment and it can be used, from web developers, penetration testers or even security researchers to test web applications with the view to find bugs, errors or vulnerabilities related to command injection attacks. By using this tool, it is very easy to find and exploit a command injection vulnerability in a certain vulnerable parameter or string. Commix is written in Python programming language.
 
-<h1>
-<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h1>
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer
+</h2>
 
-<p>The tool is only for testing and academic purposes and can only be used where strict consent has been given. <strong>Do not use it for illegal purposes!!</strong></p>
+The tool is only for testing and academic purposes and can only be used where strict consent has been given. <strong>Do not use it for illegal purposes!!</strong>
 
-<h1>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements
+</h2>
+<a href="http://www.python.org/download/" target="_blank">Python</a> version <strong>2.6.x</strong> or <strong>2.7.x</strong> is required for running this program.
 
-<p><a href="http://www.python.org/download/" target="_blank">Python</a> version <strong>2.6.x</strong> or <strong>2.7.x</strong> is required for running this program.</p>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation
+</h2>
 
-<h1>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
-
-<p>Download commix by cloning the Git repository:</p>
+Download commix by cloning the Git repository:
 <pre><code>git clone https://github.com/stasinopoulos/commix.git commix</code></pre>
 
-<p>Commix comes packaged on the official repositories, of the following Linux distributions:</p>
+Commix comes packaged on the official repositories of the following Linux distributions, so you can use the package manager to install it!
 <ul>
 <li><a href="https://archassault.org/" target="_blank">ArchAssault</a></li>
 <li><a href="http://blackarch.org/" target="_blank">BlackArch</a></li>
 </ul>
 
-<p>Commix also comes as a plugin, on the following penetration testing frameworks:</p>
+Commix also comes as a plugin, on the following penetration testing frameworks:
 <ul>
 <li><a href="https://github.com/trustedsec/ptf" target="_blank">The Penetration Testers Framework (PTF)</a></li>
 </ul>
 
-<h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
-
-<pre><code>Usage: python commix.py [options]
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage
+</h2>
+To get a list of all options and switches use:
+<pre><code>python commix.py -h
 </code></pre>
+Do you want to have a quick look of all available options and switches? Check <a href="https://github.com/stasinopoulos/commix/wiki/Usage" target="_blank">here</a>.
 
-<h4>
-<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h4>
-
-<pre><code>-h, --help            Show help and exit.
---verbose             Enable the verbose mode.
---install             Install 'commix' to your system.
---version             Show version number and exit.
---update              Check for updates (apply if any) and exit.
-</code></pre>
-
-<h4>
-<a id="target" class="anchor" href="#target" aria-hidden="true"><span class="octicon octicon-link"></span></a>Target</h4>
-This options has to be provided, to define the target URL.
-<pre><code>--url=URL           Target URL
---url-reload        Reload target URL after command execution.
-</code></pre>
-
-<h4>
-<a id="request" class="anchor" href="#request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Request</h4>
-These options can be used, to specify how to connect to the target URL.
-<pre><code>--host=HOST         HTTP Host header.
---referer=REFERER   HTTP Referer header.
---user-agent=AGENT  HTTP User-Agent header.
---cookie=COOKIE     HTTP Cookie header.
---random-agent      Use a randomly selected HTTP User-Agent header.
---headers=HEADERS   Extra headers (e.g. 'Header1:Value1\nHeader2:Value2').
---proxy=PROXY       Use a HTTP proxy (e.g. '127.0.0.1:8080').
---auth-url=AUTH_..  Login panel URL.
---auth-data=AUTH..  Login parameters and data.
---auth-type=AUTH..  HTTP authentication type (e.g. 'basic').
---auth-cred=AUTH..  HTTP Authentication credentials (e.g. 'admin:admin').
-</code></pre>
-
-<h4>
-<a id="enumeration" class="anchor" href="#enumeration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enumeration</h4>
-These options can be used, to enumerate the target host.
-<pre><code>--current-user      Retrieve current user name.
---hostname          Retrieve current hostname.
---is-root           Check if the current user have root privs.
---sys-info          Retrieve system information.
---users             Retrieve system users.
---passwords         Retrieve system users password hashes.
---privileges        Retrieve system users privileges.
-</code></pre>
-
-<h4>
-<a id="file_access" class="anchor" href="#file_access" aria-hidden="true"><span class="octicon octicon-link"></span></a>File access</h4>
-These options can be used to access files on the target host.
-<pre><code>--file-read=FILE..  Read a file from the target host.
---file-write=FIL..  Write to a file on the target host.
---file-upload=FI..  Upload a file on the target host.
---file-dest=FILE..  Host's absolute filepath to write and/or upload to.
-</code></pre>
-
-<h4>
-<a id="modules" class="anchor" href="#file_access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h4>
-These options can be used increase the detection and/or injection capabilities.
-<pre><code>--icmp-exfil=IP_..  The ICMP exfiltration technique (e.g. 'ip_src=192.168.178.1,ip_dst=192.168.178.3').
---shellshock        The 'shellshock' injection technique.
-</code></pre>
-
-<h4>
-<a id="injection" class="anchor" href="#injection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Injection</h4>
-These options can be used, to specify which parameters to inject and to provide custom injection payloads.
-<pre><code>--data=DATA         POST data to inject (use 'INJECT_HERE' tag to specify the testable parameter).
---suffix=SUFFIX     Injection payload suffix string.
---prefix=PREFIX     Injection payload prefix string.
---technique=TECH    Specify injection technique(s) to use.
---maxlen=MAXLEN     The length of the output on time-based technique (Default: 10000 chars).
---delay=DELAY       Set Time-delay for time-based and file-based techniques (Default: 1 sec).
---tmp-path=TMP_P..  Set remote absolute path of temporary files directory.
---root-dir=SRV_R..  Set remote absolute path of web server's root directory (Default: /var/www/).
---icmp-exfil=IP_..  Use the ICMP exfiltration technique (e.g. 'ip_src=192.168.178.1,ip_dst=192.168.178.3').
---alter-shell=AL..  Use an alternative os-shell (e.g. Python). Available, only for 'tempfile-based' injections.
---os-cmd=OS_CMD     Execute a single operating system command.
-</code></pre>
-
-<h4>
-<a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples</h4>
+<h2>
+<a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples
+</h2>
 So, do you want to get some ideas on how to use commix? Just go and check '<a href="https://github.com/stasinopoulos/commix/wiki/Usage-Examples" target="_blank">usage examples</a>' wiki page, where there are several test cases / attack scenarios.
 
-<h4>
-<a id="upload-shells" class="anchor" href="#upload-shells" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Shells</h4>
+<h2>
+<a id="upload-shells" class="anchor" href="#upload-shells" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Shells</h2>
 Commix enables you to upload web-shells (e.g metasploit PHP meterpreter) easily on target host. For more, check '<a href="https://github.com/stasinopoulos/commix/wiki/Upload-shells" target="_blank">upload shells</a>' wiki page.
 
-<h4>
-<a id="module-development" class="anchor" href="#module-development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules Development</h4>
+<h2>
+<a id="module-development" class="anchor" href="#module-development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules Development</h2>
 Do you want to increase the capabilities of the commix tool and/or to adapt it to our needs? You can easily develop and import our own modules. For more, check '<a href="https://github.com/stasinopoulos/commix/wiki/Module-Development" target="_blank">module development</a>' wiki page.
 
-<h4>
-<a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command Injection Testbeds</h4>
-<p>A collection of pwnable VMs, that includes web apps vulnerable to command injections</p>
+<h2>
+<a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command Injection Testbeds</h2>
+A collection of pwnable VMs, that includes web apps vulnerable to command injections
 <ul>
 <li><a href="http://www.dvwa.co.uk/" target="_blank">Damn Vulnerable Web App</a></li>
 <li><a href="https://www.owasp.org/index.php/Category:OWASP_Mutillidae" target="_blank">OWASP: Mutillidae</a></li>
@@ -183,10 +112,11 @@ Do you want to increase the capabilities of the commix tool and/or to adapt it t
 <li><a href="https://github.com/SpiderLabs/MCIR/tree/master/shellol" target="_blank">SpiderLabs: MCIR (ShelLOL)</a></li>
 <li><a href="https://www.vulnhub.com/entry/kioptrix-2014-5,62/" target="_blank">Kioptrix: 2014 (#5)</a></li>
 <li><a href="https://github.com/andresriancho/w3af-moth/" target="_blank">w3af-moth</a></li>
+<li><a href="https://github.com/stasinopoulos/commix-testbed" target="_blank">commix-testbed</a></li>
 </ul>
 
-<h4>
-<a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploitation Demos</h4>
+<h2>
+<a id="command-injection-testbeds" class="anchor" href="#command-injection-testbeds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploitation Demos</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=PT4uSTCxKJU" target="_blank">Exploiting DVWA (1.0.8) command injection flaws.</a></li>
 <li><a href="https://www.youtube.com/watch?v=zqI8NcHfboo" target="_blank">Exploiting bWAPP command injection flaws (normal & blind).</a></li>
@@ -196,15 +126,16 @@ Do you want to increase the capabilities of the commix tool and/or to adapt it t
 <li><a href="https://www.youtube.com/watch?v=cy7AW6OQBmU" target="_blank">Upload a Weevely PHP web shell on target host.</a></li>
 </ul>
 
-<h4>
-<a id="bugs-and-enhancements" class="anchor" href="#bugs-and-enhancements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs and Enhancements</h4>
+<h2>
+<a id="bugs-and-enhancements" class="anchor" href="#bugs-and-enhancements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs and Enhancements</h2>
 For bug reports or enhancements, please open an issue <a href="https://github.com/stasinopoulos/commix/issues" target="_blank">here</a>.
 
-<h4>
-<a id="supported-platforms" class="anchor" href="#supported-platforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Platforms</h4>
+<h2>
+<a id="supported-platforms" class="anchor" href="#supported-platforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Platforms</h2>
 <ul>
 <li>Linux</li>
 <li>Mac OS X</li>
+<li>Windows (experimental)</li>
 </ul>
 
       </section>
@@ -214,7 +145,7 @@ For bug reports or enhancements, please open an issue <a href="https://github.co
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright"><strong>Commix</strong> maintained by <strong><a href="https://github.com/stasinopoulos">Anastasios Stasinopoulos</a>(<a href="https://twitter.com/ancst">@ancst</a></strong>)</a></p><p></p>
+        <p class="copyright"><strong>Commix</strong> maintained by <strong><a href="https://github.com/stasinopoulos">Anastasios Stasinopoulos</a>(<a href="https://twitter.com/ancst">@ancst</a></strong>)</a>
       </footer>
     </div>
    
